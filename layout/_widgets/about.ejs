@@ -1,0 +1,21 @@
+<div class="bg-white shadow-md rounded-lg px-4 py-5">
+  <div class="text-center space-y-4">
+    <img src="<%- theme.avatar %>" alt="logo" class="inline-block w-20 rounded-lg">
+    <h3 class="leading-6 text-2xl font-medium text-gray-700">
+      <%- theme.about.name %>
+    </h3>
+    <p class="mt-1 max-w-2xl text-base text-gray-600">
+      <%- theme.about.intro %>
+    </p>
+  </div>
+  <div class="flex flex-row justify-center space-x-4 pt-2 text-center text-gray-700">
+    <div>
+      <p class="text-lg"><%- site.posts.length %></p>
+      <p><%= __('profile.posts') %></p>
+    </div>
+    <div>
+      <p class="text-lg"><%= totalcount(site) %></p>
+      <p><%= __('profile.words') %></p>
+    </div>
+  </div>
+</div>

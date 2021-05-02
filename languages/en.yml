@@ -1,0 +1,25 @@
+profile:
+  posts: Posts
+  words: Words
+
+paginator:
+  pre: Previous
+  next: Next
+
+readmore: Read More
+
+post:
+  wordcount: words
+  categories: included in
+
+toc:
+  title: TOC
+  back2top: Back to top
+
+archive: Archive
+
+tag: Tag
+
+tagcloud: Tags
+
+category: Category

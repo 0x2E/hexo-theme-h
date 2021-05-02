@@ -1,0 +1,10 @@
+<div>
+  <h2 class="mb-1 text-lg font-bold text-gray-700"><%= __('category') %></h2>
+  <div class="flex flex-row flex-wrap bg-white shadow-md rounded-lg py-4 px-2">
+    <%- list_categories({
+      depth: 0,
+      style: false,
+      separator: ''
+    }) %>
+  </div>
+</div>

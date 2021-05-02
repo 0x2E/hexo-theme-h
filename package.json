@@ -1,0 +1,24 @@
+{
+  "name": "hexo-theme-h",
+  "version": "1.0.0",
+  "description": "hexo-theme-h is a sincere and pure Hexo theme",
+  "main": "gulpfile.js",
+  "repository": "https://github.com/0x2E/hexo-theme-h.git",
+  "author": "rook1e404",
+  "license": "MIT",
+  "scripts": {
+    "css": "gulp css",
+    "js": "gulp js"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "cssnext": "^1.8.4",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.2.2",
+    "tailwindcss": "^2.0.0"
+  }
+}

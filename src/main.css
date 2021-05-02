@@ -1,0 +1,42 @@
+@tailwind base;
+
+@tailwind components;
+
+.category-link, .archive-link {
+  @apply block w-auto hover:bg-gray-100 px-3 py-2 text-sm font-medium
+}
+
+.category-count, .archive-count {
+  @apply bg-gray-200 text-gray-600 text-sm px-1 mx-1
+}
+
+.page-number, #paginator .extend {
+  @apply mx-1 px-3 py-2 bg-white text-gray-700 font-medium hover:bg-gray-600 hover:text-white rounded-md
+}
+
+#paginator .current {
+  @apply bg-gray-500 text-white
+}
+
+#toc ol {
+  @apply ml-4
+}
+
+.toc-link {
+  @apply block w-auto p-1 hover:bg-gray-100
+}
+
+.markdown-body {
+  @apply text-base leading-relaxed
+}
+.markdown-body img {
+  @apply mx-auto
+}
+.markdown-body ul {
+  @apply list-disc
+}
+.markdown-body ol {
+  @apply list-decimal
+}
+
+@tailwind utilities;

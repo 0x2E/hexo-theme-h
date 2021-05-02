@@ -1,0 +1,55 @@
+<nav class="shadow bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <a href="/" class="flex-shrink-0 flex items-center">
+          <img src="<%- theme.logo %>" alt="logo" class="inline-block w-8 rounded-lg">&nbsp;
+          <h1 class="font-medium text-xl text-gray-900"><%- theme.title %></h1>
+        </a>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-2">
+          <% for(var i in theme.nav) { %>
+              <a href="<%= url_for(theme.nav[i]) %>" class="hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium"><%- i %></a>
+          <% } %>
+        </div>
+      </div>
+      <div class="-mr-2 flex md:hidden">
+        <!-- Mobile menu button -->
+        <button class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" onclick="toggleNav()">
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Heroicon name: menu
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="svg1">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+
+          <!--
+            Heroicon name: x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="svg2">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    Mobile menu, toggle classes based on menu state.
+
+    Open: "block", closed: "hidden"
+  -->
+  <div class="hidden md:hidden" id="navExpand">
+    <div class="w-full px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <% for(var i in theme.nav) { %>
+          <a href="<%= url_for(theme.nav[i]) %>" class="hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium text-center"><%- i %></a>
+      <% } %>
+    </div>
+  </div>
+</nav>

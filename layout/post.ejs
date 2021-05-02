@@ -1,0 +1,39 @@
+<article itemscope itemtype="https://schema.org/BlogPosting">
+  <span hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <meta itemprop="image" content="<%- full_url_for(theme.avatar) %>">
+    <meta itemprop="name" content="<%= page.author %>">
+    <meta itemprop="url" content="<%= config.url %>">
+  </span>
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="<%= page.author %>">
+    <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="<%- full_url_for(theme.avatar) %>">
+    </span>
+  </span>
+  <header class="pb-8">
+    <h1 itemprop="name headline description" class="text-3xl text-gray-700 font-bold pb-2"><%= page.title %></h1>
+    <p class="font-medium text-gray-500">
+      <time itemprop="datePublished"><%- date(page.date, "YYYY-MM-DD") %></time>
+      ·
+      <% if(page.categories.length > 0){ %>
+        <%= __('post.categories') %>
+        <% page.categories.each(function(cate) { %>
+          <a href="<%= url_for(cate.path) %>" class="underline"><%- cate.name %></a>
+        <% }) %>
+      <% } %>
+      ·
+      <%= wordcount(page.content) %> <%= __('post.wordcount') %>
+
+    </p>
+  </header>
+  <article itemprop="articleBody" class="max-w-none markdown-body">
+    <%- page.content %>
+  </article>
+  <% if(page.tags.length > 0){ %>
+    <footer class="mt-4 pt-4 border-t-4 border-dashed border-gray-200 font-medium text-sm text-gray-500">
+      <% page.tags.each(function(tag) { %>
+        <a href="<%= url_for(tag.path) %>">#<%- tag.name %></a>
+      <% }) %>
+    </footer>
+  <% } %>
+</article>

@@ -1,0 +1,16 @@
+<% page.title = __('tagcloud') %>
+<article>
+  <header class="hidden">
+    <h1 itemprop="name headline description"><%= page.title %></h1>
+  </header>
+  <article class="space-x-4">
+    <%- tagcloud(site.tags, {
+      min_font: 1,
+      max_font: 2,
+      unit: 'rem',
+      color: true,
+      start_color: 'rgba(156, 163, 175, 1)',
+      end_color: 'rgba(55, 65, 81, 1)'
+    }) %>
+  </article>
+</article>

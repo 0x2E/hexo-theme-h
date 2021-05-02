@@ -1,0 +1,25 @@
+profile:
+  posts: 文章
+  words: 字数
+
+paginator:
+  pre: 上一页
+  next: 下一页
+
+readmore: 阅读更多
+
+post:
+  wordcount: 字
+  categories: 收录于
+
+toc:
+  title: 目录
+  back2top: 返回顶部
+
+archive: 归档
+
+tag: 标签
+
+tagcloud: 标签云
+
+category: 分类

@@ -1,0 +1,33 @@
+<footer class="bg-white pt-4 pb-9 text-center text-sm font-medium text-gray-600 ">
+    <p><%- theme.footer %></p>
+    <p>Powered by <a href="https://hexo.io/">Hexo</a> & <a href="https://github.com/0x2E/hexo-theme-h">theme-h</a></p>
+</footer>
+
+<script>
+function toggleNav() {
+  var svg1 = document.getElementById("svg1").classList
+  var svg2 = document.getElementById("svg2").classList
+  var navExpand = document.getElementById("navExpand").classList
+
+  svg1.toggle("hidden")
+  svg2.toggle("hidden")
+  navExpand.toggle("hidden")
+  navExpand.toggle("flex")
+}
+</script>
+
+<% if(is_post()){ %>
+  <%- js('https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js') %>
+  <%- js('https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js') %>
+  <script>
+    const el = document.querySelectorAll('.postimg');
+    // lozad.js
+    const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+    observer.observe();
+    // mediumZoom
+    mediumZoom(el, {
+      background: 'black',
+      scrollOffset: 0
+    })
+  </script>
+<% } %>

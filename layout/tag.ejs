@@ -1,0 +1,8 @@
+<% page.title = [__('tag'), page.tag].join(" - ") %>
+<% page_header = [__('tag'), page.tag].join(" / ") %>
+<article>
+  <%- partial('_partials/page-header', { title: page_header } ) %>
+  <%- partial('_partials/post-list') %>
+</article>
+
+<%- partial('_partials/paginator') %>

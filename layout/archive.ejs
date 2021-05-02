@@ -1,0 +1,8 @@
+<% page.title = [__('archive'), page.year].join(" - ")  %>
+<% page_header = [__('archive'), page.year].join(" / ") %>
+<article>
+  <%- partial('_partials/page-header', { title: page_header } ) %>
+  <%- partial('_partials/post-list') %>
+</article>
+
+<%- partial('_partials/paginator') %>

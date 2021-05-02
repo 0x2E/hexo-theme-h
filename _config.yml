@@ -1,0 +1,27 @@
+# ---
+# hexo-theme-h 氢
+# https://github.com/0x2E/hexo-theme-h
+# ---
+
+favicon: /image/favicon.ico
+apple_touch_icon: /image/apple-touch-icon.png
+logo: /image/apple-touch-icon.png
+avatar: /image/avatar.png
+
+title: hexo-theme-h
+
+about:
+  name: Me
+  intro: I do ...
+
+nav:
+  Home: /
+  Tags: /tags
+
+comment: false
+
+footer: © 2021 me # support HTML
+
+static:
+  markdown: https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css
+  highlight: https://cdn.jsdelivr.net/npm/prism-themes@1.5.0/themes/prism-darcula.css
